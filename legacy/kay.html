@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magic Opening Card 70/30</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #f4f4f4;
+      font-family: sans-serif;
+    }
+
+    /* Main card container */
+    .main-card {
+      width: 300px;
+      height: 400px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      position: relative;
+      overflow: visible;
+      cursor: pointer;
+      padding: 10px; /* GAP between outer and inner cards */
+      box-sizing: border-box;
+    }
+
+    /* Inner cards */
+    .inner-card {
+      position: absolute;
+      left: 10px;  /* align with padding */
+      width: calc(100% - 20px); /* keep space on both sides */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: white;
+      transition: transform 0.6s ease;
+      border-radius: 10px;
+    }
+
+    .inner-top {
+      top: 10px;
+      height: calc(70% - 10px); /* 70% of main card height */
+      background: #123445;
+    }
+
+    .inner-bottom {
+      bottom: 10px;
+      height: calc(30% - 10px); /* 30% of main card height */
+      background: #e63912;
+    }
+
+    /* Hidden content */
+    .hidden-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.9);
+      opacity: 0;
+      transition: all 0.6s ease;
+      text-align: center;
+      font-size: 1rem;
+      color: #333;
+      padding: 10px;
+    }
+
+    /* Hover effect: open panels slightly */
+    .main-card:hover .inner-top {
+      transform: translateY(-20%);
+    }
+
+    .main-card:hover .inner-bottom {
+      transform: translateY(20%);
+    }
+
+    .main-card:hover .hidden-content {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  </style>
+</head>
+<body>
+  <div class="main-card">
+    <div class="inner-card inner-top">Top Card</div>
+    <div class="inner-card inner-bottom">Bottom Card</div>
+    <div class="hidden-content">
+      🎉 Surprise! <br>
+      Top card is 70%, bottom card is 30%.
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .outer-card{
+            height: 450px;
+            width: 300px;
+            margin-top: 100px;
+            margin-left: 170px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transform: rotate(10deg);
+            background-color: #fff;
+            box-shadow: 0px 30px 30px 0px rgba(0, 0, 0, 0.3);
+        }
+        .one{
+            height: 320px;
+            width: 290px;
+            padding-left: 30px;
+            margin-top: 5px;
+            border-radius: 15px;
+            background-color: #EFE6D5;
+            position: relative;
+        }
+        .fornt{
+            
+            display: flex;
+            transform: rotateY(0deg);
+            background-size: cover;
+            background-image: url(assets/ChatGPT\ Image\ Sep\ 4\,\ 2025\,\ 10_04_14\ PM.png);
+        }
+        .back{
+            transform: rotateY(180deg);
+            display: flex;
+            background-size: cover;
+            background-image: url(assets/tushart-removebg-preview.png);
+        }
+        .fornt, .back{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            backface-visibility: hidden;
+        }
+        .two h2{
+            font-size: 28px;
+            padding-top: 30px;
+            text-align: center;
+            color: var(--secondery-color);
+        }
+        .one:hover{
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="outer-card">
+            <div class="one">
+                <div class="fornt"></div>
+                <div class="back"></div>
+            </div>
+            <div class="two">
+                <h2>TUSHAR PALASE <br> 😎 </h2>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
