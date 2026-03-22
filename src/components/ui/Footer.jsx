@@ -26,9 +26,9 @@ export default function Footer() {
           <div className="flex-1 space-y-4">
             <h3 className="mb-6 text-2xl font-medium tracking-wide font-heading">Contact</h3>
             <p className="text-gray-400 font-body text-sm leading-relaxed max-w-[200px]">
-              Maharashtra, India<br /><br />
-              +91 98765 43210<br />
-              abc@gmail.com
+              Jain Bhavan, Maharaj Gunj, Jam Bagh, Hyderabad, Telangana 500012<br /><br />
+              +91 95798 14142<br />
+              tusharpalase4614@gmail.com
             </p>
           </div>
 
@@ -37,7 +37,7 @@ export default function Footer() {
             <h3 className="hidden mb-6 text-xl font-medium tracking-wide opacity-0 font-heading md:block">Social</h3>
              <SocialLink text="LinkedIn" href="https://www.linkedin.com/in/tushar-palase-b8030127a" />
              <SocialLink text="GitHub" href="https://github.com/tush-art18" />
-             <SocialLink text="WhatsApp" href="https://web.whatsapp.com/" />
+             {/* <SocialLink text="WhatsApp" href="https://web.whatsapp.com/" /> */}
           </div>
 
           {/* Center Column: The Merged Contact Call-to-Action */}
@@ -45,12 +45,12 @@ export default function Footer() {
              <h2 className="mt-2 text-3xl font-bold leading-tight tracking-tighter md:text-4xl lg:text-5xl font-heading">
                Let's build something <br /> <span className="italic tracking-tighter text-primary">amazing</span> together.
              </h2>
-             <p className="max-w-md mx-auto mb-4 italic text-gray-400 font-body text-sm md:text-base">
+             <p className="max-w-md mx-auto mb-4 text-sm italic text-gray-400 font-body md:text-base">
                 Feel free to reach out for collaborations, freelance projects, or full-time opportunities.
              </p>
              
              <div className="flex flex-col justify-center w-full gap-4 mt-4 sm:flex-row">
-                 <a href="mailto:abc@gmail.com" className="flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold transition-all rounded-full shadow-lg bg-primary hover:bg-orange-600 font-body shadow-orange-500/20 hover:scale-105">
+                 <a href="" className="flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold transition-all rounded-full shadow-lg bg-primary hover:bg-orange-600 font-body shadow-orange-500/20 hover:scale-105">
                      Get In Touch <span className="text-base leading-none">👋</span>
                  </a>
              </div>
