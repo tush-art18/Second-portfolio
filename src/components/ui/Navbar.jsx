@@ -8,7 +8,7 @@ function NavLinks() {
                 <a 
                    key={item} 
                    href={item === 'Home' ? '#' : `#${item.toLowerCase()}`}
-                   className="text-sm font-body text-text/70 hover:text-text transition-colors relative group"
+                   className="relative text-sm transition-colors font-body text-text/70 hover:text-text group"
                 >
                    {item}
                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
@@ -33,7 +33,7 @@ export default function Navbar() {
   return (
     <>
       <nav className={`fixed top-0 w-full p-4 md:p-6 z-[100] transition-all duration-300 ${scrolled ? 'bg-background/80 backdrop-blur-md shadow-sm border-b border-text/5' : 'bg-transparent'} ${mobileMenuOpen ? 'bg-transparent shadow-none border-none backdrop-blur-none' : ''}`}>
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <div className="flex items-center justify-between mx-auto max-w-7xl">
             <motion.div 
                initial={{ opacity: 0, x: -20 }}
                animate={{ opacity: 1, x: 0 }}
@@ -47,9 +47,9 @@ export default function Navbar() {
             </motion.div>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="items-center hidden space-x-8 md:flex">
                <NavLinks />
-               <a href="/legacy/assets/TUSHAR-PALASE (2).pdf" target="_blank" rel="noreferrer" className="px-6 py-2.5 bg-text hover:bg-primary text-background rounded-full font-body text-sm font-semibold transition-colors shadow-lg">
+               <a href="/legacy/assets/TUSHAR-PALASE-RESUME.pdf" target="_blank" rel="noreferrer" className="px-6 py-2.5 bg-text hover:bg-primary text-background rounded-full font-body text-sm font-semibold transition-colors shadow-lg">
                   Resume
                </a>
             </div>
@@ -60,7 +60,7 @@ export default function Navbar() {
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 aria-label="Toggle Menu"
             >
-                <div className="w-6 h-5 flex flex-col justify-between relative">
+                <div className="relative flex flex-col justify-between w-6 h-5">
                     <span className={`w-full h-0.5 bg-current transform transition-all duration-300 origin-left ${mobileMenuOpen ? 'rotate-45 translate-x-1' : ''}`} />
                     <span className={`w-full h-0.5 bg-current transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : 'opacity-100'}`} />
                     <span className={`w-full h-0.5 bg-current transform transition-all duration-300 origin-left ${mobileMenuOpen ? '-rotate-45 translate-x-1' : ''}`} />
@@ -87,7 +87,7 @@ export default function Navbar() {
                          transition={{ delay: i * 0.1 }}
                          href={item === 'Home' ? '#' : `#${item.toLowerCase()}`}
                          onClick={() => setMobileMenuOpen(false)}
-                         className="text-4xl font-heading font-black text-text hover:text-primary transition-colors uppercase tracking-tighter"
+                         className="text-4xl font-black tracking-tighter uppercase transition-colors font-heading text-text hover:text-primary"
                       >
                          {item}
                       </motion.a>
@@ -100,7 +100,7 @@ export default function Navbar() {
                      target="_blank" 
                      rel="noreferrer" 
                      onClick={() => setMobileMenuOpen(false)}
-                     className="mt-8 px-10 py-4 bg-primary text-background rounded-full font-body text-xl font-bold shadow-lg shadow-primary/30"
+                     className="px-10 py-4 mt-8 text-xl font-bold rounded-full shadow-lg bg-primary text-background font-body shadow-primary/30"
                   >
                         Resume
                   </motion.a>
