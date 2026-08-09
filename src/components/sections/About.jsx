@@ -1,69 +1,90 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
 
 export default function About() {
   return (
-    <section id="about" className="py-24 md:py-40 w-full relative flex flex-col items-center justify-center z-20 overflow-hidden min-h-[90vh]">
-      
-      {/* Huge Background Typography for Depth */}
-      <motion.div 
-         initial={{ x: -100, opacity: 0 }}
-         whileInView={{ x: 0, opacity: 0.03 }}
-         transition={{ duration: 1.5 }}
-         viewport={{ once: true }}
-         className="absolute top-1/2 left-0 -translate-x-14 md:-translate-x-10 -translate-y-1/2 text-[15vw] md:text-[12vw] font-heading font-black leading-none whitespace-nowrap text-border/5 pointer-events-none select-none opacity-5"
-      >
-         CREATIVE DEVELOPER
-      </motion.div>
+    <section id="about" className="py-20 md:py-32 w-full relative flex items-center justify-center z-20 overflow-hidden bg-[#f4efe6] text-[#1a365d] font-body">
+      {/* Background Decorative Glow (Blue to Orange Gradient Glow behind Card) */}
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] bg-gradient-to-tr from-blue-500/20 via-purple-500/15 to-orange-500/20 rounded-full blur-[100px] pointer-events-none" />
 
-      {/* Floating accent shape */}
-      <motion.div 
-         initial={{ scale: 0, opacity: 0 }}
-         whileInView={{ scale: 1, opacity: 1 }}
-         transition={{ duration: 1, delay: 0.5 }}
-         viewport={{ once: true }}
-         className="absolute right-[-10vw] top-[20%] w-[30vw] h-[30vw] bg-secondary/20 rounded-full blur-[80px] pointer-events-none"
-      />
+      <div className="z-10 grid items-center w-full gap-12 lg:gap-16 px-6 sm:px-10 max-w-7xl mx-auto lg:grid-cols-12">
+        {/* ========================================================================= */}
+        {/* LEFT COLUMN: TEXT CONTENT */}
+        {/* ========================================================================= */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="lg:col-span-7 flex flex-col items-start"
+        >
+          {/* Section Tag */}
+          <span className="text-[#3b82f6] font-bold text-xs md:text-sm tracking-[0.2em] uppercase block mb-3">
+            ABOUT ME
+          </span>
 
-      <div className="z-10 grid items-center w-full gap-16 px-6 mx-auto max-w-7xl xl:px-12 md:grid-cols-2 md:gap-24">
-         
-         <motion.div
-           initial={{ opacity: 0, y: 50 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           transition={{ duration: 0.8 }}
-           viewport={{ once: true, margin: "-100px" }}
-           className="flex flex-col items-start"
-         >
-           <h2 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold mb-6 tracking-tighter uppercase leading-[0.9]">
-             Beyond <br/><span className="italic font-light tracking-tight text-primary">The Code</span>
-           </h2>
-           <div className="w-24 h-1.5 bg-primary/80 rounded-full mb-8 shadow-md" />
-           <p className="text-sm font-semibold tracking-widest uppercase text-text/50 font-heading">
-              Innovating Digital Experiences
-           </p>
-         </motion.div>
+          {/* Heading */}
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-heading tracking-tight text-[#1a365d] mb-6 leading-[1.15]">
+            Building digital experiences with{' '}
+            <span className="text-[#3b82f6]">purpose</span> &{' '}
+            <span className="text-[#f97316]">precision</span>.
+          </h2>
 
-         <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="relative p-8 space-y-6 text-lg leading-relaxed border shadow-xl md:space-y-8 text-text/70 font-body md:text-xl md:p-12 bg-white/40 border-white/60 rounded-3xl backdrop-blur-md"
-         >
-            {/* Elegant Corner Accent perfectly aligned to the card's 3xl radius */}
-            <div className="absolute -left-[2px] -top-[2px] w-12 h-12 border-t-[3px] border-l-[3px] border-primary rounded-tl-3xl opacity-80 pointer-events-none" />
-            <div className="absolute -right-[2px] -bottom-[32px] w-12 h-12 border-b-[3px] border-r-[3px] border-secondary rounded-br-3xl opacity-80 pointer-events-none" />
-            
-            <p className="text-xl font-medium leading-snug tracking-tight md:text-3xl text-text">
-                I am <strong className="font-bold text-primary">TUSHAR PALASE</strong>, a Computer Science graduate.
-            </p>
-            <p>
-                My academic foundation laid the groundwork for my journey in technology, enabling me to develop a strong analytical mindset and problem-solving capabilities. From the very beginning of my education, I’ve been driven by a curiosity for how things work under the hood.
-            </p>
-            <p>
-                My core expertise spans across <span className="font-semibold text-text border-b-2 border-secondary/50 pb-0.5">Python, Django, NumPy, Pandas, Matplotlib, HTML, CSS, JavaScript, React, Tailwind CSS, MySQL, and MongoDB</span>, ensuring I can build everything from robust data architectures to highly polished, performance-optimized web solutions.
-            </p>
-         </motion.div>
+          {/* Bio Paragraphs */}
+          <p className="text-base md:text-lg text-[#1a365d]/75 leading-relaxed mb-4 max-w-2xl">
+            I'm a Full Stack Developer & UI/UX Designer who loves turning ideas into functional, beautiful and impactful digital products.
+          </p>
+          <p className="text-base md:text-lg text-[#1a365d]/75 leading-relaxed mb-8 max-w-2xl">
+            I specialize in modern web technologies and enjoy crafting seamless experiences from concept to code.
+          </p>
+
+          {/* Signature */}
+          <div className="mb-8">
+            <span className="font-['Great_Vibes',cursive] text-4xl sm:text-5xl lg:text-6xl text-[#1a365d] tracking-wide select-none block transform -rotate-3 hover:scale-105 transition-transform origin-left">
+              Tushar Palase
+            </span>
+          </div>
+
+          {/* CTA Button */}
+          <a
+            href="#skills"
+            className="inline-flex items-center gap-2.5 bg-black hover:bg-zinc-800 text-white px-6 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-md hover:shadow-lg hover:scale-[1.02] group"
+          >
+            MORE ABOUT ME
+            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+          </a>
+        </motion.div>
+
+        {/* ========================================================================= */}
+        {/* RIGHT COLUMN: PORTRAIT CARD & DECORATION */}
+        {/* ========================================================================= */}
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="lg:col-span-5 relative flex justify-center lg:justify-end"
+        >
+          {/* Main Dark Image Frame - Image perfectly edge-to-edge inside black box */}
+          <div className="relative z-10 w-full max-w-md aspect-[4/5] rounded-3xl bg-[#0c0d10] p-2.5 shadow-2xl border border-white/10 overflow-hidden group">
+            <div className="w-full h-full rounded-2xl overflow-hidden bg-black relative">
+              <img
+                src="/legacy/assets/profile.png"
+                alt="Tushar Palase"
+                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
+            </div>
+          </div>
+
+          {/* Decorative Dot Grid Pattern (Bottom Right of Image) */}
+          <div className="absolute -bottom-6 -right-6 z-0 hidden sm:grid grid-cols-6 gap-2 p-2 pointer-events-none opacity-40">
+            {Array.from({ length: 24 }).map((_, i) => (
+              <div key={i} className="w-1.5 h-1.5 rounded-full bg-[#1a365d]/40" />
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
