@@ -3,19 +3,19 @@ import { motion } from 'framer-motion';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 
 const featuredProjects = [
+    // {
+    //     id: '01',
+    //     number: '01',
+    //     title: 'Preschool Website',
+    //     description: 'WOW Saplings Preschool & Teacher Training, Kolhapur',
+    //     tags: ['JavaScript', 'Next.js', 'tailwindcss', 'Python', 'Django' , '2026'],
+    //     link: 'https://wowsaplingsschool.in/',
+    //     image: '/legacy/assets/wowsaplings.png',
+    //     theme: 'dark'
+    // },
     {
         id: '01',
         number: '01',
-        title: 'Preschool Website',
-        description: 'WOW Saplings Preschool & Teacher Training, Kolhapur',
-        tags: ['JavaScript', 'Next.js', 'tailwindcss', 'Python', 'Django' , '2026'],
-        link: 'https://wowsaplingsschool.in/',
-        image: '/legacy/assets/wowsaplings.png',
-        theme: 'dark'
-    },
-    {
-        id: '02',
-        number: '02',
         title: 'AURA Interiors',
         description: 'High performance architecture and interior design website.',
         tags: ['React.js', 'Tailwind CSS', 'GSAP','Rive', '2026'],
@@ -24,8 +24,8 @@ const featuredProjects = [
         theme: 'dark'
     },
     {
-        id: '03',
-        number: '03',
+        id: '02',
+        number: '02',
         title: 'We Create Digital Solutions',
         description: 'Creative agency platform built with responsive architecture.',
         tags: ['React.js', 'Tailwind CSS', 'GSAP','Rive', '2026'],
