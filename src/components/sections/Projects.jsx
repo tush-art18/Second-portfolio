@@ -64,15 +64,15 @@ const moreProjects = [
         image: '/legacy/assets/taskify.png',
         fallbackImage: '/legacy/assets/smjca.png'
     },
-    {
-        id: 'm4',
-        title: 'PalaSync',
-        subtitle: 'Premium web design and development agency',
-        category: 'React.js',
-        link: 'https://palasync.vercel.app/',
-        image: '/legacy/assets/fittrack.png',
-        fallbackImage: '/legacy/assets/palasync-portfolio.png'
-    }
+    // {
+    //     id: 'm4',
+    //     title: 'PalaSync',
+    //     subtitle: 'Premium web design and development agency',
+    //     category: 'React.js',
+    //     link: 'https://palasync.vercel.app/',
+    //     image: '/legacy/assets/fittrack.png',
+    //     fallbackImage: '/legacy/assets/palasync-portfolio.png'
+    // }
 ];
 
 export default function Projects() {
